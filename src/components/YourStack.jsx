@@ -1,153 +1,37 @@
-const YourStack = ({
-    stack,
-    removeStack,
-    removeAll
-}) => {
+const YourStack = ({ stack, removeStack, removeAll }) => {
+  return (
+    <aside className="your-stack">
+      <h2>Your Stack</h2>
 
+      <p className="selected-count">{stack.length} Technology Selected</p>
 
-    return(
+      {stack.length === 0 ? (
+        <div className="empty-stack">
+          <p>Your stack is empty.</p>
+        </div>
+      ) : (
+        <>
+          {stack.map((item) => (
+            <div className="stack-item" key={item.id}>
+              <img src={item.icon} alt={item.name} />
 
+              <div>
+                <h4>{item.name}</h4>
 
-        <section className="your-stack">
+                <small>{item.category}</small>
+              </div>
 
-
-            <div className="stack-title">
-
-
-                <h2>
-
-                    Your Stack
-
-                </h2>
-
-
-                <p>
-
-                    {stack.length} Technology Selected
-
-                </p>
-
-
+              <button onClick={() => removeStack(item.id)}>✕</button>
             </div>
-
-
-
-
-            {
-
-                stack.length === 0
-
-                ?
-
-                <div className="empty-stack">
-
-
-                    <h3>
-
-                        No technology selected yet.
-
-                    </h3>
-
-
-                    <p>
-
-                        Add technologies from above to build your stack.
-
-                    </p>
-
-
-                </div>
-
-
-                :
-
-
-                <div>
-
-
-                    {
-
-                        stack.map(
-
-                            item => (
-
-
-                                <div
-
-                                    className="stack-card"
-
-                                    key={item.id}
-
-                                >
-
-
-                                    <img
-
-                                        src={item.image}
-
-                                        alt={item.name}
-
-                                    />
-
-
-
-                                    <h3>
-
-                                        {item.name}
-
-                                    </h3>
-
-
-
-                                    <button
-
-                                        onClick={() => removeStack(item.id)}
-
-                                    >
-
-                                        Remove
-
-                                    </button>
-
-
-                                </div>
-
-
-                            )
-
-                        )
-
-                    }
-
-
-
-                    <button
-
-                        className="remove-all-btn"
-
-                        onClick={removeAll}
-
-                    >
-
-                        Remove All
-
-                    </button>
-
-
-                </div>
-
-
-            }
-
-
-
-        </section>
-
-
-    )
-
-
-}
-
+          ))}
+
+          <button className="remove-all-btn" onClick={removeAll}>
+            Remove All
+          </button>
+        </>
+      )}
+    </aside>
+  );
+};
 
 export default YourStack;

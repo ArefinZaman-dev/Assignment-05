@@ -1,118 +1,33 @@
-const TechnologyCard = ({
-    technology,
-    addStack,
-    selected
-}) => {
+const TechnologyCard = ({ technology, addToStack, isAdded }) => {
+  return (
+    <div className="technology-card">
+      <div className="card-top">
+        <img src={technology.icon} alt={technology.name} />
 
+        <span>{technology.badge}</span>
+      </div>
 
-    return(
+      <h3>{technology.name}</h3>
 
-        <div className="technology-card">
+      <p>{technology.description}</p>
 
+      <div className="card-info">
+        <span>{technology.category}</span>
 
+        <span>{technology.difficulty}</span>
+      </div>
 
-            <div className="card-header">
+      <div className="rating">⭐ {technology.rating}</div>
 
-
-                <img
-                    src={technology.image}
-                    alt={technology.name}
-                />
-
-
-                <span>
-
-                    {technology.badge}
-
-                </span>
-
-
-            </div>
-
-
-
-
-            <h3>
-
-                {technology.name}
-
-            </h3>
-
-
-
-            <p>
-
-                {technology.description}
-
-            </p>
-
-
-
-
-            <div className="card-tags">
-
-
-                <span>
-
-                    {technology.category}
-
-                </span>
-
-
-                <span>
-
-                    {technology.level}
-
-                </span>
-
-
-            </div>
-
-
-
-
-            <div className="rating">
-
-                ⭐ {technology.rating}
-
-            </div>
-
-
-
-
-            <button
-
-                onClick={() => addStack(technology)}
-
-                className={
-                    selected
-                    ?
-                    "added-btn"
-                    :
-                    "stack-btn"
-                }
-
-            >
-
-                {
-                    selected
-                    ?
-                    "✓ Added"
-                    :
-                    "Add to Stack"
-                }
-
-
-            </button>
-
-
-
-        </div>
-
-    )
-
-
-}
-
+      <button
+        onClick={() => addToStack(technology)}
+        disabled={isAdded}
+        className={isAdded ? "added-btn" : "stack-btn"}
+      >
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
+      </button>
+    </div>
+  );
+};
 
 export default TechnologyCard;

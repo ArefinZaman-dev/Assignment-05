@@ -1,210 +1,70 @@
 const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-brand">
+          <div className="footer-logo">
+            <div className="footer-logo-icon">DS</div>
 
+            <h2>
+              Dev<span>Stack</span>
+            </h2>
+          </div>
 
-    return(
+          <p>
+            Curated tools, technologies, and resources for developers building
+            modern software.
+          </p>
 
+          <div className="social-links">
+            <a href="#">GitHub</a>
 
-        <footer className="footer">
+            <a href="#">Twitter</a>
 
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
 
-            <div className="footer-content">
+        <div>
+          <h3>Product</h3>
 
+          <a href="#">Home</a>
 
-                <div>
+          <a href="#">Technologies</a>
 
+          <a href="#">Projects</a>
+        </div>
 
-                    <h2>
+        <div>
+          <h3>Company</h3>
 
-                        Dev Stack
+          <a href="#">About</a>
 
-                    </h2>
+          <a href="#">Contact</a>
 
+          <a href="#">Careers</a>
+        </div>
 
-                    <p>
+        <div>
+          <h3>Legal</h3>
 
-                        Build your perfect developer stack with modern technologies and tools.
+          <a href="#">Privacy Policy</a>
 
-                    </p>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
 
+      <div className="footer-bottom">
+        <p>© 2026 Dev Stack. All rights reserved.</p>
 
-                    <div className="social-links">
+        <div>
+          <a href="#">Privacy</a>
 
-
-                        <a href="#">
-
-                            GitHub
-
-                        </a>
-
-
-                        <a href="#">
-
-                            Twitter
-
-                        </a>
-
-
-                        <a href="#">
-
-                            LinkedIn
-
-                        </a>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-
-                <div>
-
-
-                    <h3>
-
-                        Product
-
-                    </h3>
-
-
-                    <a href="#">
-
-                        Technologies
-
-                    </a>
-
-
-                    <a href="#">
-
-                        Features
-
-                    </a>
-
-
-                    <a href="#">
-
-                        Pricing
-
-                    </a>
-
-
-                </div>
-
-
-
-
-                <div>
-
-
-                    <h3>
-
-                        Company
-
-                    </h3>
-
-
-                    <a href="#">
-
-                        About
-
-                    </a>
-
-
-                    <a href="#">
-
-                        Contact
-
-                    </a>
-
-
-                    <a href="#">
-
-                        Careers
-
-                    </a>
-
-
-                </div>
-
-
-
-
-                <div>
-
-
-                    <h3>
-
-                        Legal
-
-                    </h3>
-
-
-                    <a href="#">
-
-                        Privacy
-
-                    </a>
-
-
-                    <a href="#">
-
-                        Terms
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-            <div className="footer-bottom">
-
-
-                <p>
-
-                    Copyright © 2026 Dev Stack. All rights reserved.
-
-                </p>
-
-
-
-                <div>
-
-
-                    <a href="#">
-
-                        Privacy Policy
-
-                    </a>
-
-
-                    <a href="#">
-
-                        Terms & Conditions
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-
-        </footer>
-
-
-    )
-
-
-}
-
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;
