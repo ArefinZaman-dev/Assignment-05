@@ -1,9 +1,13 @@
+import StackCard from "./StackCard";
+
+
 const YourStack = ({ stack, removeFromStack, removeAll }) => {
 
 
     return (
 
-        <div>
+        <section className="your-stack">
+
 
             <h2>
                 Your Stack
@@ -15,42 +19,51 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
             </h3>
 
 
+
             {
-                stack.length === 0 ? <p>No technology selected yet.</p> :
+
+                stack.length === 0
+
+                ?
+
+                <p>
+                    No technology selected yet.
+                </p>
+
+
+                :
+
 
                 <div>
 
+
                     {
+
                         stack.map((technology)=>(
 
-                            <div key={technology.id}>
+                            <StackCard
 
-                                <img src={technology.icon} alt={technology.name} width="40" />
+                                key={technology.id}
 
+                                technology={technology}
 
-                                <h4>
-                                    {technology.name}
-                                </h4>
+                                removeFromStack={removeFromStack}
 
-
-                                <p>
-                                    {technology.category}
-                                </p>
-
-
-                                <button onClick={() => removeFromStack(technology.id)}>
-                                    ✕
-                                </button>
-
-
-                            </div>
+                            />
 
                         ))
+
                     }
 
 
-                    <button onClick={removeAll}>
+
+                    <button
+                        className="remove-all-btn"
+                        onClick={removeAll}
+                    >
+
                         Remove All
+
                     </button>
 
 
@@ -59,7 +72,7 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
             }
 
 
-        </div>
+        </section>
 
     )
 
