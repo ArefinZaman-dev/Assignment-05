@@ -1,24 +1,29 @@
 const Footer = () => {
 
 
-    return (
+    return(
+
 
         <footer className="footer">
 
 
-            <div className="footer-container">
+            <div className="footer-content">
 
 
-                <div className="footer-brand">
+                <div>
 
 
                     <h2>
+
                         Dev Stack
+
                     </h2>
 
 
                     <p>
+
                         Build your perfect developer stack with modern technologies and tools.
+
                     </p>
 
 
@@ -26,17 +31,23 @@ const Footer = () => {
 
 
                         <a href="#">
+
                             GitHub
+
                         </a>
 
 
                         <a href="#">
+
                             Twitter
+
                         </a>
 
 
                         <a href="#">
+
                             LinkedIn
+
                         </a>
 
 
@@ -47,85 +58,108 @@ const Footer = () => {
 
 
 
-                <div className="footer-links">
+
+                <div>
 
 
-                    <div>
+                    <h3>
 
-                        <h3>
-                            Product
-                        </h3>
+                        Product
 
-
-                        <a href="#">
-                            Technologies
-                        </a>
+                    </h3>
 
 
-                        <a href="#">
-                            Features
-                        </a>
+                    <a href="#">
+
+                        Technologies
+
+                    </a>
 
 
-                        <a href="#">
-                            Pricing
-                        </a>
+                    <a href="#">
+
+                        Features
+
+                    </a>
 
 
-                    </div>
+                    <a href="#">
+
+                        Pricing
+
+                    </a>
 
 
-
-                    <div>
-
-                        <h3>
-                            Company
-                        </h3>
-
-
-                        <a href="#">
-                            About
-                        </a>
-
-
-                        <a href="#">
-                            Contact
-                        </a>
-
-
-                        <a href="#">
-                            Careers
-                        </a>
-
-
-                    </div>
+                </div>
 
 
 
-                    <div>
 
-                        <h3>
-                            Legal
-                        </h3>
+                <div>
 
 
-                        <a href="#">
-                            Privacy
-                        </a>
+                    <h3>
+
+                        Company
+
+                    </h3>
 
 
-                        <a href="#">
-                            Terms
-                        </a>
+                    <a href="#">
+
+                        About
+
+                    </a>
 
 
-                    </div>
+                    <a href="#">
+
+                        Contact
+
+                    </a>
+
+
+                    <a href="#">
+
+                        Careers
+
+                    </a>
+
+
+                </div>
+
+
+
+
+                <div>
+
+
+                    <h3>
+
+                        Legal
+
+                    </h3>
+
+
+                    <a href="#">
+
+                        Privacy
+
+                    </a>
+
+
+                    <a href="#">
+
+                        Terms
+
+                    </a>
 
 
                 </div>
 
 
             </div>
+
 
 
 
@@ -133,19 +167,27 @@ const Footer = () => {
 
 
                 <p>
+
                     Copyright © 2026 Dev Stack. All rights reserved.
+
                 </p>
+
 
 
                 <div>
 
+
                     <a href="#">
+
                         Privacy Policy
+
                     </a>
 
 
                     <a href="#">
+
                         Terms & Conditions
+
                     </a>
 
 
@@ -155,9 +197,12 @@ const Footer = () => {
             </div>
 
 
+
         </footer>
 
+
     )
+
 
 }
 

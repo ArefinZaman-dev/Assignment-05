@@ -1,10 +1,12 @@
-import StackCard from "./StackCard";
+const YourStack = ({
+    stack,
+    removeStack,
+    removeAll
+}) => {
 
 
-const YourStack = ({ stack, removeFromStack, removeAll }) => {
+    return(
 
-
-    return (
 
         <section className="your-stack">
 
@@ -13,12 +15,16 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
 
 
                 <h2>
+
                     Your Stack
+
                 </h2>
 
 
                 <p>
+
                     {stack.length} Technology Selected
+
                 </p>
 
 
@@ -26,8 +32,8 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
 
 
 
-            {
 
+            {
 
                 stack.length === 0
 
@@ -36,8 +42,17 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
                 <div className="empty-stack">
 
 
-                    <p>
+                    <h3>
+
                         No technology selected yet.
+
+                    </h3>
+
+
+                    <p>
+
+                        Add technologies from above to build your stack.
+
                     </p>
 
 
@@ -52,19 +67,55 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
 
                     {
 
-                        stack.map((technology)=>(
+                        stack.map(
 
-                            <StackCard
+                            item => (
 
-                                key={technology.id}
 
-                                technology={technology}
+                                <div
 
-                                removeFromStack={removeFromStack}
+                                    className="stack-card"
 
-                            />
+                                    key={item.id}
 
-                        ))
+                                >
+
+
+                                    <img
+
+                                        src={item.image}
+
+                                        alt={item.name}
+
+                                    />
+
+
+
+                                    <h3>
+
+                                        {item.name}
+
+                                    </h3>
+
+
+
+                                    <button
+
+                                        onClick={() => removeStack(item.id)}
+
+                                    >
+
+                                        Remove
+
+                                    </button>
+
+
+                                </div>
+
+
+                            )
+
+                        )
 
                     }
 
@@ -89,9 +140,12 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
             }
 
 
+
         </section>
 
+
     )
+
 
 }
 

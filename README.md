@@ -1,16 +1,66 @@
-# React + Vite
+# Dev Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern developer stack builder website where users can explore technologies and create their own personalized development stack.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React.js
+- JavaScript
+- CSS
+- JSON Data
+- React Toastify
+- Vite
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+1. Users can explore different development technologies with details.
+2. Users can add technologies to their own stack and remove them anytime.
+3. Responsive design for desktop, tablet, and mobile devices.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## React Questions
+
+
+### 1. What is JSX, and why is it used in React?
+
+JSX is a syntax that allows us to write HTML-like code inside JavaScript. React uses JSX to create UI components easily.
+
+
+### 2. What is the difference between props and state?
+
+Props are used to pass data from parent component to child component. State is used to manage data inside a component.
+
+
+### 3. What does useState do?
+
+useState is a React hook used to create and update component state.
+
+I used useState to manage technologies, loading status, and selected stack.
+
+
+### 4. What does useEffect do?
+
+useEffect is used to perform side effects in React.
+
+I used useEffect to load technology JSON data when the application starts.
+
+
+### 5. Why does every item in a map list need a unique key?
+
+A unique key helps React identify which item changed, added, or removed from a list.
+
+
+### 6. What is conditional rendering?
+
+Conditional rendering means showing different UI based on a condition.
+
+Example:
+Showing empty stack message when no technology is selected.
+
+
+### 7. How do you pass data from parent to child?
+
+Data is passed using props from parent component to child component.
+
+Child can send data back by calling a function received through props.

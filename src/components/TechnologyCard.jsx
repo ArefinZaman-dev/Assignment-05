@@ -1,22 +1,22 @@
-const TechnologyCard = ({ technology, addToStack, isAdded }) => {
+const TechnologyCard = ({
+    technology,
+    addStack,
+    selected
+}) => {
 
 
-    return (
+    return(
 
         <div className="technology-card">
+
 
 
             <div className="card-header">
 
 
                 <img
-
-                    src={technology.icon}
-
+                    src={technology.image}
                     alt={technology.name}
-
-                    width="50"
-
                 />
 
 
@@ -28,6 +28,7 @@ const TechnologyCard = ({ technology, addToStack, isAdded }) => {
 
 
             </div>
+
 
 
 
@@ -47,6 +48,7 @@ const TechnologyCard = ({ technology, addToStack, isAdded }) => {
 
 
 
+
             <div className="card-tags">
 
 
@@ -59,7 +61,7 @@ const TechnologyCard = ({ technology, addToStack, isAdded }) => {
 
                 <span>
 
-                    {technology.difficulty}
+                    {technology.level}
 
                 </span>
 
@@ -68,32 +70,32 @@ const TechnologyCard = ({ technology, addToStack, isAdded }) => {
 
 
 
-            <p>
+
+            <div className="rating">
 
                 ⭐ {technology.rating}
 
-            </p>
+            </div>
+
 
 
 
             <button
 
+                onClick={() => addStack(technology)}
+
                 className={
-                    isAdded
+                    selected
                     ?
                     "added-btn"
                     :
                     "stack-btn"
                 }
 
-                onClick={() => addToStack(technology)}
-
-                disabled={isAdded}
-
             >
 
                 {
-                    isAdded
+                    selected
                     ?
                     "✓ Added"
                     :
@@ -108,6 +110,7 @@ const TechnologyCard = ({ technology, addToStack, isAdded }) => {
         </div>
 
     )
+
 
 }
 

@@ -1,56 +1,90 @@
 const Navbar = () => {
 
 
-    return (
+    return(
 
         <nav className="navbar">
 
 
-            <div className="mobile-menu">
+            <div className="logo-area">
 
-                ☰
+
+                <div className="logo-icon">
+
+                    DS
+
+                </div>
+
+
+                <h2>
+
+                    <span>
+                        Dev
+                    </span>
+
+
+                    <span className="logo-gradient">
+
+                        Stack
+
+                    </span>
+
+
+                </h2>
+
 
             </div>
 
-
-
-            <div className="logo">
-
-                Dev Stack
-
-            </div>
 
 
 
             <div className="nav-links">
 
 
-                <a href="#">
+                <a 
+                    className="active"
+                    href="#"
+                >
+
                     Home
+
                 </a>
 
 
+
                 <a href="#">
+
                     Technologies
+
                 </a>
 
 
+
                 <a href="#">
+
                     Projects
+
                 </a>
 
 
+
                 <a href="#">
+
                     About
+
                 </a>
 
 
+
                 <a href="#">
+
                     Contact
+
                 </a>
 
 
             </div>
+
 
 
 
@@ -62,6 +96,7 @@ const Navbar = () => {
                     Sign In
 
                 </button>
+
 
 
                 <button className="signup-btn">
@@ -78,6 +113,7 @@ const Navbar = () => {
         </nav>
 
     )
+
 
 }
 
