@@ -9,26 +9,39 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
         <section className="your-stack">
 
 
-            <h2>
-                Your Stack
-            </h2>
+            <div className="stack-title">
 
 
-            <h3>
-                {stack.length} Technology Selected
-            </h3>
+                <h2>
+                    Your Stack
+                </h2>
+
+
+                <p>
+                    {stack.length} Technology Selected
+                </p>
+
+
+            </div>
 
 
 
             {
 
+
                 stack.length === 0
 
                 ?
 
-                <p>
-                    No technology selected yet.
-                </p>
+                <div className="empty-stack">
+
+
+                    <p>
+                        No technology selected yet.
+                    </p>
+
+
+                </div>
 
 
                 :
@@ -58,8 +71,11 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
 
 
                     <button
+
                         className="remove-all-btn"
+
                         onClick={removeAll}
+
                     >
 
                         Remove All
@@ -68,6 +84,7 @@ const YourStack = ({ stack, removeFromStack, removeAll }) => {
 
 
                 </div>
+
 
             }
 

@@ -23,6 +23,7 @@ const StackCard = ({ technology, removeFromStack }) => {
                     {technology.category}
                 </p>
 
+
             </div>
 
 
