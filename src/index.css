@@ -966,3 +966,146 @@ img{
 
 
 }
+
+.mobile-menu{
+
+    display:none;
+
+    font-size:24px;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .navbar{
+
+        padding:20px;
+
+        display:flex;
+
+        justify-content:space-between;
+
+    }
+
+
+
+    .mobile-menu{
+
+        display:block;
+
+    }
+
+
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+
+
+    .nav-buttons{
+
+        gap:8px;
+
+    }
+
+
+
+    .signin-btn{
+
+        font-size:12px;
+
+    }
+
+
+
+    .signup-btn{
+
+        padding:7px 12px;
+
+        font-size:12px;
+
+    }
+
+
+
+    .hero{
+
+        margin:40px 20px;
+
+        text-align:center;
+
+    }
+
+
+
+    .hero-buttons{
+
+        justify-content:center;
+
+        flex-direction:column;
+
+    }
+
+
+
+    .technology-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .technology-card{
+
+        width:100%;
+
+    }
+
+
+
+    .your-stack{
+
+        margin-top:50px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+    .logo{
+
+        font-size:16px;
+
+    }
+
+
+
+    .hero-content h1{
+
+        font-size:32px;
+
+    }
+
+
+
+    .section-heading h2{
+
+        font-size:30px;
+
+    }
+
+
+
+}
