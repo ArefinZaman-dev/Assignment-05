@@ -66,3 +66,139 @@ img{
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
+
+.navbar{
+
+    max-width:1180px;
+    margin:auto;
+    padding:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.logo{
+
+    font-size:18px;
+    font-weight:700;
+
+}
+
+
+.nav-links{
+
+    display:flex;
+    gap:25px;
+
+}
+
+
+.nav-links a{
+
+    color:#475467;
+    font-size:14px;
+
+}
+
+
+.nav-buttons{
+
+    display:flex;
+    gap:12px;
+
+}
+
+
+.signin-btn{
+
+    background:white;
+    color:#111827;
+
+}
+
+
+.signup-btn{
+
+    background:#ec4899;
+    color:white;
+    padding:8px 18px;
+    border-radius:20px;
+
+}
+
+
+
+.hero{
+
+    max-width:1180px;
+    margin:60px auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+
+.hero-content{
+
+    width:50%;
+
+}
+
+
+.hero-content h1{
+
+    font-size:48px;
+    line-height:1.1;
+
+}
+
+
+.hero-content h1 span{
+
+    background:linear-gradient(
+        90deg,
+        #ff5b35,
+        #c026d3
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+}
+
+
+.hero-content p{
+
+    margin-top:20px;
+    color:#667085;
+    line-height:1.6;
+
+}
+
+
+.hero-buttons{
+
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+
+}
+
+
+.hero-image{
+
+    width:40%;
+
+}
+
+
+.hero-image img{
+
+    width:100%;
+
+}

@@ -2,32 +2,56 @@ const Navbar = () => {
 
     return (
 
-        <nav>
+        <nav className="navbar">
 
-            <div>
-                Dev Stack
+            <div className="logo">
+                DevStack
             </div>
 
 
-            <div>
-                Home
-                Technologies
-                Projects
-                About
-                Contact
+            <div className="nav-links">
+
+                <a href="#">
+                    Home
+                </a>
+
+                <a href="#">
+                    Technologies
+                </a>
+
+                <a href="#">
+                    Projects
+                </a>
+
+                <a href="#">
+                    About
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
             </div>
 
 
-            <div>
-                Sign In
-                Sign Up
+            <div className="nav-buttons">
+
+                <button className="signin-btn">
+                    Sign In
+                </button>
+
+
+                <button className="signup-btn">
+                    Sign Up
+                </button>
+
             </div>
+
 
         </nav>
 
     )
 
 }
-
 
 export default Navbar;

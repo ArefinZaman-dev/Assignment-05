@@ -1,46 +1,59 @@
 const Hero = () => {
 
     return (
-        <section>
 
-            <div>
+        <section className="hero">
+
+            <div className="hero-content">
 
                 <h1>
-                    Build Your{" "}
+                    Build Your Ideal
+                    <br />
+
                     <span>
-                        Developer Stack
+                        Development Stack
                     </span>
+
                 </h1>
 
+
                 <p>
-                    Create your personalized developer stack with modern
-                    technologies and build powerful applications easily.
+                    Explore frontend, backend, database, and tooling options,
+                    compare them side by side, and put together the stack that fits your next project.
                 </p>
 
-                <div>
 
-                    <button>
+                <div className="hero-buttons">
+
+                    <button className="primary-btn">
                         Explore Technologies
                     </button>
 
-                    <button>
+
+                    <button className="secondary-btn">
                         Learn More
                     </button>
 
                 </div>
 
+
             </div>
 
-            <div>
+
+            <div className="hero-image">
+
                 <img
-                    src="https://cdn-icons-png.flaticon.com/512/1005/1005141.png"
-                    alt="Developer"
-                    width="400"
+                    src="/src/assets/hero.png"
+                    alt="hero"
                 />
 
             </div>
+
+
         </section>
 
     )
+
 }
+
 export default Hero;
