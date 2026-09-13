@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
 
+import { toast } from "react-toastify";
+
 
 import Navbar from "./components/Navbar";
+
 import Hero from "./components/Hero";
+
 import TechnologySection from "./components/TechnologySection";
+
 import YourStack from "./components/YourStack";
+
 import Footer from "./components/Footer";
+
 
 
 const App = () => {
@@ -50,14 +57,17 @@ const App = () => {
 
 
         const alreadyAdded = stack.find(
+
             item => item.id === technology.id
+
         );
+
 
 
         if(alreadyAdded){
 
 
-            alert("Already Added");
+            toast.error("Already Added");
 
 
             return;
@@ -66,7 +76,16 @@ const App = () => {
         }
 
 
+
         setStack([...stack, technology]);
+
+
+
+        toast.success(
+
+            `${technology.name} Added`
+
+        );
 
 
     }
@@ -77,6 +96,14 @@ const App = () => {
     const removeFromStack = (id) => {
 
 
+        const removedTechnology = stack.find(
+
+            item => item.id === id
+
+        );
+
+
+
         const remainingStack = stack.filter(
 
             item => item.id !== id
@@ -84,7 +111,16 @@ const App = () => {
         );
 
 
+
         setStack(remainingStack);
+
+
+
+        toast.info(
+
+            `${removedTechnology.name} Removed`
+
+        );
 
 
     }
@@ -98,12 +134,21 @@ const App = () => {
         setStack([]);
 
 
+
+        toast.success(
+
+            "Stack Cleared"
+
+        );
+
+
     }
 
 
 
 
     return (
+
 
         <>
 
@@ -115,6 +160,7 @@ const App = () => {
 
 
             {
+
 
                 loading
 
